@@ -4,7 +4,6 @@ import HomePage from "./pages/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
-import MobileMenu from "./components/Navbar/MobileMenu";
 import AboutCanvas from "./components/AboutCanvas";
 import NoMatch from "./components/NoMatch";
 
