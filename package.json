@@ -2,18 +2,37 @@
   "name": "wannawander",
   "version": "1.0.0",
   "description": "A FullStack React application built to make finding your next hike easy",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eric-purrington/WannaWander.git"
-  },
+  "repository": "github.com/eric-purrington/WannaWander",
   "author": "Eric Purrington",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/eric-purrington/WannaWander/issues"
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
   },
-  "homepage": "https://github.com/eric-purrington/WannaWander#readme"
+  "dependencies": {
+    "@auth0/auth0-react": "^1.0.0",
+    "axios": "^0.18.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^3.2.0",
+    "dot-prop": ">=5.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.3",
+    "express-session": "^1.17.1",
+    "if-env": "^1.0.4",
+    "moment": "^2.27.0",
+    "mongoose": "^5.3.16",
+    "path": "^0.12.7"
+  }
 }
