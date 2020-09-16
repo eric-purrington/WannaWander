@@ -7,12 +7,12 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import NoMatch from "./components/NoMatch";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    < Router >
-      <BackgroundImage/>
-      <Navbar />
+    < Router>
+      <BackgroundImage />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/dashboard" component={Dashboard} />
@@ -20,6 +20,7 @@ function App() {
         <Route exact path="/signup" component={Signup} />
         <Route component={NoMatch} />
       </Switch>
+      <Footer />
     </Router >
   );
 }

@@ -3,8 +3,8 @@ import "./style.css";
 
 function Footer() {
     return (
-        <div>
-            
+        <div className="uk-container-expand uk-text-center footer">
+            <p>&copy; Eric Purrington 2020</p>
         </div>
     )
 }

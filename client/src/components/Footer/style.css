@@ -1,0 +1,11 @@
+.footer {
+    height: 200px;
+    margin-top: 200px;
+    /* background-color: #002409;
+    color: #fffec1; */
+}
+
+.footer p {
+    padding: 75px;
+    font-size: larger;
+}
