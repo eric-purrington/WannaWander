@@ -19,6 +19,4 @@ body, html, #root{
     height: 100%;
     font-family: 'Montserrat', sans-serif !important;
     scroll-behavior: smooth;
-    background-color: rgb(241, 240, 132);
-    color: #012b00;
 }
