@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     < Router>
-      <BackgroundImage />
+      <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/dashboard" component={Dashboard} />
