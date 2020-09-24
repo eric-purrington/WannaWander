@@ -1,28 +1,28 @@
-import React from "react";
-import Footer from "../components/Footer";
+import React, { useState, useEffect } from "react";
 
 function Home() {
+
+
+    useEffect(() => {
+        getLocation();
+    }, []);
+
+    function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+      }
+
+    function showPosition(position) {
+        var usersLat = position.coords.latitude;
+        var usersLon = position.coords.longitude;
+    }
+
     return (
-        <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in diam sit amet eros mollis sagittis sit amet eu odio. Aliquam bibendum eget leo sed congue. Aliquam erat volutpat. Cras non tincidunt tortor. Nunc et vestibulum ante. Etiam aliquet sapien sollicitudin, tristique elit sollicitudin, tristique leo. Nulla aliquet fringilla quam eget malesuada.
-
-Nunc ut justo sit amet nibh consequat efficitur. Morbi vel mi sit amet sem sagittis dignissim. Pellentesque ut sodales velit, eu imperdiet dolor. Integer ut porttitor erat. Mauris ac elit laoreet, pharetra tortor ac, ullamcorper mauris. In mattis quam vel aliquam sollicitudin. Aliquam lacinia scelerisque sapien. Aenean ultricies luctus velit vel porta.
-
-Vivamus scelerisque tellus elit, eget tristique nisl ultricies quis. Etiam sodales neque vitae metus sagittis, id mattis orci vehicula. Aliquam varius nec felis nec hendrerit. Donec nulla eros, vulputate id orci quis, sodales luctus tellus. Mauris vestibulum, lectus sit amet elementum varius, augue nisi sollicitudin nisl, quis euismod lectus sem in magna. Morbi a sem eget lacus tincidunt tristique. Sed ut nisi id risus ultrices fermentum vitae eget lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus mollis dui lorem, nec condimentum ante elementum eu. Vivamus nulla odio, lacinia ut augue ac, laoreet ultricies sapien. Maecenas feugiat mauris ac tempor suscipit. Quisque ante nulla, elementum a fringilla nec, consectetur non dolor. Curabitur vitae velit eget arcu tincidunt dictum. Sed ultrices eget libero ut venenatis. Etiam iaculis aliquet volutpat.
-
-Curabitur bibendum enim eget egestas tincidunt. Maecenas commodo nunc sit amet ex venenatis, in vulputate justo vulputate. Aliquam vel pulvinar augue, a blandit augue. Cras at efficitur ligula. Praesent eros ante, suscipit ut porttitor a, sagittis sit amet sapien. Nulla gravida lectus viverra odio efficitur iaculis. Proin sit amet odio tempus, rhoncus velit ut, feugiat quam. Cras vitae tincidunt sapien. Aliquam vehicula, nunc quis tincidunt condimentum, tortor enim egestas ligula, id malesuada nisl diam in metus. Nam at venenatis lorem, vel tincidunt urna. Ut vestibulum placerat augue a rhoncus. Nam in lorem pellentesque arcu finibus varius ac id mi. Morbi vehicula dapibus dignissim.
-
-Proin ex nisl, pulvinar nec libero sed, elementum egestas nisl. Ut faucibus condimentum metus. In euismod nunc metus, in lacinia libero mattis non. Integer ut augue nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ultrices, lacus non pulvinar finibus, tellus mauris facilisis tortor, at rhoncus eros nisi et metus. Quisque efficitur sed est et maximus.
-
-Aenean risus eros, rhoncus vel tortor id, faucibus maximus eros. Maecenas viverra hendrerit orci, non egestas metus blandit at. Phasellus mollis magna eu orci auctor pharetra vitae a orci. Sed elementum nunc sed tortor dapibus lacinia. Proin semper, enim in placerat rutrum, nulla leo luctus velit, in vehicula mauris ante porttitor lectus. Fusce vel rhoncus libero. Ut vitae ultricies nunc. Sed eget mauris eget nibh dictum tincidunt. Duis ex lorem, suscipit ac interdum vel, imperdiet vel risus. Praesent leo arcu, egestas et gravida non, blandit eget orci. Sed ut massa volutpat, blandit velit quis, eleifend nisl.
-
-Nam varius quam quis eros aliquam placerat. Suspendisse eleifend accumsan risus nec aliquet. Aenean malesuada maximus metus, a condimentum ante mattis fermentum. Morbi blandit, sem quis mollis lobortis, dolor tellus sodales ex, et viverra libero erat rhoncus urna. Praesent imperdiet augue tellus. Donec a neque at mauris semper aliquam at nec elit. Cras lacinia ultrices est quis ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus interdum luctus turpis, ut facilisis nulla. Proin viverra leo eget ex porttitor, sit amet ultrices justo dignissim. Proin blandit nisl at sapien egestas luctus et et tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse pharetra elit massa, pellentesque sollicitudin ex tincidunt in. Pellentesque eleifend turpis eu velit viverra, id vulputate magna condimentum. Donec vitae velit nec nulla bibendum consequat dictum a nisl. Cras auctor justo non scelerisque malesuada.
-
-Pellentesque interdum ac libero in mollis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris commodo bibendum cursus. Phasellus et elit eros. Maecenas imperdiet enim eu odio varius auctor. Donec lacinia orci ac nisi semper hendrerit. Pellentesque nec euismod lectus. Etiam non lorem ultrices, bibendum massa in, pretium libero. Nam molestie magna maximus, efficitur dui eget, eleifend leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras iaculis purus vitae dui varius, malesuada tincidunt mauris condimentum. Suspendisse porttitor imperdiet molestie. Sed sed ullamcorper ex, sit amet rutrum ligula. Phasellus nec mauris sit amet est hendrerit mollis. Donec dapibus ante id nisl varius dictum.
-
-Proin viverra nec diam in euismod. Nunc nec gravida neque. Phasellus ut sem nisi. Aenean facilisis est vel justo interdum bibendum. Proin et convallis urna. Aenean risus nunc, blandit non dapibus in, accumsan sit amet dolor. Suspendisse potenti. Mauris placerat nunc nulla, et fermentum massa tristique in. Donec cursus elit ac sodales varius. Integer hendrerit sapien nec sapien facilisis lacinia. Mauris ac mi consectetur, mollis sapien ac, consectetur lectus. Sed sit amet mauris diam. Proin et neque sed nisl accumsan viverra. Pellentesque gravida mi placerat purus vehicula, eget molestie turpis cursus.
-
-Nam nec consequat eros. Proin sodales metus eget auctor fringilla. Mauris pharetra ipsum sed hendrerit dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam eget mattis massa, at pharetra lorem. Curabitur condimentum rhoncus arcu, vel tempor dui semper mattis. Ut vel justo a nulla posuere aliquet. Aliquam in scelerisque metus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+        <div className="uk-container-expand">
+            
         </div>
     )
 }
