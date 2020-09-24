@@ -1,10 +1,11 @@
 .uk-navbar, .uk-navbar-dropdown {
     background-color: rgba(11, 44, 15, 0.75) !important;
+    margin: 0px !important;
 }
 
 .uk-navbar-nav li a, .uk-logo {
     color: rgba(255, 255, 255, 0.75) !important;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .uk-logo {
@@ -13,15 +14,22 @@
 
 .mountains {
     margin: 10px;
-    height: 75px;
-    opacity: 0.75;
+    height: 100px;
+    opacity: 0.9;
 }
 
 .giveMeAHike {
-    color: rgba(248, 244, 0, 0.75) !important;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(248, 211, 0) !important;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .giveMeAHike:hover {
     text-decoration: none;
+}
+
+.topBar, .bottomBar {
+    background-color: rgba(248, 211, 0) !important;
+    padding: 5px;
+    height: 30px;
+    margin: 0px;
 }

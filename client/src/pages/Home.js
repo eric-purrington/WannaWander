@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 function Home() {
-
+    var usersLat;
+    var usersLon;
 
     useEffect(() => {
         getLocation();
@@ -16,13 +17,13 @@ function Home() {
       }
 
     function showPosition(position) {
-        var usersLat = position.coords.latitude;
-        var usersLon = position.coords.longitude;
+        usersLat = position.coords.latitude;
+        usersLon = position.coords.longitude;
     }
 
     return (
         <div className="uk-container-expand">
-            
+            <h1 className="findAHikeH1">Find a Hike</h1>
         </div>
     )
 }
