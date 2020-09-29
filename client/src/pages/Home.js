@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import FindHikeCon from "../components/FindHikeCon";
+import SearchBar from "../components/SearchBar";
 
 function Home() {
     var usersLat;
@@ -23,7 +25,12 @@ function Home() {
 
     return (
         <div className="uk-container-expand">
-            <h1 className="findAHikeH1">Find a Hike</h1>
+            <FindHikeCon>
+              <SearchBar />
+              {hikes.map(hike => 
+                <HikeCard />
+              )}
+            </FindHikeCon>
         </div>
     )
 }

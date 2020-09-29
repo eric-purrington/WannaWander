@@ -1,4 +1,3 @@
-import { PromiseProvider } from "mongoose";
 import React from "react";
 import "./style.css";
 
@@ -10,7 +9,7 @@ function FindHikeCon(props) {
                 <div>
                     {props.children[0]}
                 </div>
-                <div class="uk-child-width-expand@s" uk-grid="true">
+                <div class="uk-child-width-width-1-3" uk-grid="true">
                     {props.children.slice(1)}
                 </div>
             </div>
