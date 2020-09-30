@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-var passportLocalMongoose = require("passport-local-mongoose");
+// var passportLocalMongoose = require("passport-local-mongoose");
 
 const userSchema = new Schema({
   email: {
@@ -17,7 +17,7 @@ const userSchema = new Schema({
   }
 });
 
-userSchema.plugin(passportLocalMongoose);
+// userSchema.plugin(passportLocalMongoose);
 
 const User = mongoose.model("User", userSchema);
 

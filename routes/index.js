@@ -1,13 +1,11 @@
 const path = require("path");
 const router = require("express").Router();
 const apiRoutes = require("./api");
-const gapiRoutes = require("./gapi");
 const hikingRoutes = require("./hiking");
 const weatherRoutes = require("./weather");
 
 // API Routes
 router.use("/api", apiRoutes);
-router.use("/api", gapiRoutes);
 router.use("/api", hikingRoutes);
 router.use("/api", weatherRoutes);
 
