@@ -9,19 +9,10 @@ export default {
             }
         });
     },
-    getTrailsById: function(id1, id2) {
+    getTrailsById: function(id1) {
         return axios.get("/api/getTrailsById", {
             params: {
-                id1: id1,
-                id2: id2
-            }
-        });
-    },
-    getConditions: function(id1, id2) {
-        return axios.get("/api/getConditions", {
-            params: {
-                id1: id1,
-                id2: id2
+                id1: id1
             }
         });
     },

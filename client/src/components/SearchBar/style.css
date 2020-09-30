@@ -1,5 +1,5 @@
 .searchBar {
-    padding: 20px;
+    padding: 20px !important;
     background-color: rgba(11, 44, 15, 0.75) !important;
     color: white;
 }

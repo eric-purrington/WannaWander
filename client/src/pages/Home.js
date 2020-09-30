@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import FindHikeCon from "../components/FindHikeCon";
 import SearchBar from "../components/SearchBar";
+import HikeCard from "../components/HikeCard";
 
 function Home() {
     var usersLat;
     var usersLon;
+    var hikes = ["this", "that", "another"]
 
     useEffect(() => {
         getLocation();
