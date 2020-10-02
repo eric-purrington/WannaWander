@@ -8,7 +8,7 @@ function HikeCard(props) {
             <div className="uk-inline uk-transition-toggle">
                 <img className="hikeImg" src={props.img} alt={props.name} />
                 <div className="uk-overlay uk-transition-fade uk-overlay-primary uk-position-bottom">
-                    <p className="hikeRatingDifficulty">Rating: {props.rating} stars Difficulty: {props.difficulty}</p>
+                    <p className="hikeRatingDifficulty">Rating: {props.rating} stars</p>
                 </div>
             </div>
             <p className="hikeSummary">{props.summary}</p>

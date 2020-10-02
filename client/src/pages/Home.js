@@ -41,6 +41,7 @@ function Home() {
 
     const onSearch = (event) => {
         event.preventDefault();
+        console.log(event.target)
         setQueryParams({...queryParams,
             maxDistance: 30,
             minStars: 0,
@@ -62,18 +63,17 @@ function Home() {
         <div className="uk-container-expand">
             <FindHikeCon>
                 <SearchBar onSearch={onSearch} />
-                {/* {results.trails.map(hike =>  */}
+                {results.map(hike => 
                     <HikeCard 
-                        // id={hike.id}
-                        // name={hike.name}
-                        // img={hike.imgMedium}
-                        // rating={hike.stars}
-                        // difficulty={hike.difficulty}
-                        // summary={hike.summary}
-                        // length={hike.length}
-                        // gain={hike.high - hike.low}
+                        key={hike.id}
+                        name={hike.name}
+                        img={hike.imgMedium}
+                        rating={hike.stars}
+                        summary={hike.summary}
+                        length={hike.length}
+                        gain={hike.high - hike.low}
                     />
-                {/* )} */}
+                )}
             </FindHikeCon>
         </div>
     )

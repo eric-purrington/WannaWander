@@ -1,5 +1,4 @@
 export default {
-
     findDistanceBetween: function (lat1, lon1, lat2, lon2) {
         const earthR = 6371000;
         const phi1 = lat1 * Math.PI/180;
