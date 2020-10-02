@@ -3,6 +3,7 @@ import FindHikeCon from "../components/FindHikeCon";
 import SearchBar from "../components/SearchBar";
 import HikeCard from "../components/HikeCard";
 import API from "../utils/API";
+import Distance from "../utils/Distance";
 
 function Home() {
     const [results, setResults] = useState([]);
@@ -12,9 +13,12 @@ function Home() {
         maxDistance: 30,
         minStars: 0,
         minLength: 0,
-        sort: "quality",
         maxResults: 10
     });
+    const [sortBy, setSortBy] = useState("");
+    const [gain, setGain] = useState("");
+    const [approxDistance, setApproxDistance] = useState("");
+    const [lengthValue, setLengthValue] = useState("");
 
     useEffect(() => {
         if(queryParams.usersLat === 0) {
@@ -43,27 +47,33 @@ function Home() {
         event.preventDefault();
         console.log(event.target)
         setQueryParams({...queryParams,
-            maxDistance: 30,
-            minStars: 0,
-            minLength: 0,
-            sort: "quality",
-            maxResults: 10
+            maxDistance: event.target.distance.value,
+            minStars: event.target.ratingMin.value,
+            minLength: event.target.length.value,
+            maxResults: event.target.maxResults.value
         })
+        setSortBy(event.target.sortby.value);
+        setGain(event.target.gain.value);
+    }
+
+    const onLengthChange = (event) => {
+      event.preventDefault();
+      setLengthValue(event.target.value);
     }
 
     function callAPI() {
-      console.log(queryParams)
-      API.getTrails(queryParams).then(res => {
-        setResults(res.data.trails);
-        console.log(res)
-      });
+      console.log(queryParams);
+      // API.getTrails(queryParams).then(res => {
+      //   setResults(res.data.trails);
+      // });
     }
 
     return (
         <div className="uk-container-expand">
             <FindHikeCon>
-                <SearchBar onSearch={onSearch} />
-                {results.map(hike => 
+                <SearchBar onSearch={onSearch} lengthValue={lengthValue} onLengthChange={onLengthChange} />
+                <HikeCard />
+                {/* {results.map(hike => 
                     <HikeCard 
                         key={hike.id}
                         name={hike.name}
@@ -73,7 +83,7 @@ function Home() {
                         length={hike.length}
                         gain={hike.high - hike.low}
                     />
-                )}
+                )} */}
             </FindHikeCon>
         </div>
     )

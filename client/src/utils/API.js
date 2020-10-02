@@ -9,7 +9,6 @@ export default {
                 maxDistance: queryParams.maxDistance,
                 minStars: queryParams.minStars,
                 minLength: queryParams.minLength,
-                sort: queryParams.sort,
                 maxResults: queryParams.maxResults
             }
         }).catch(error => console.log(error));
