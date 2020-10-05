@@ -13,15 +13,11 @@ function Navbar() {
             <nav className="uk-navbar-container uk-navbar uk-margin" uk-navbar="true">
 
                 <div className="uk-navbar-left">
-                    <a className="uk-navbar-item giveMeAHike">Random Hike</a>
-                </div>
-
-                <div className="uk-navbar-center">
-                    <a className="uk-navbar-item uk-logo" href="#">Wanna <img className="mountains" alt="mountains" src={mountains}/> Wander?</a>
+                    <a className="uk-navbar-item uk-logo" href="#"><img className="mountains" alt="mountains" src={mountains}/> Wanna Wander?</a>
                 </div>
 
                 <div className="uk-navbar-right">
-                    <ul className="uk-navbar-nav">
+                    <ul className="uk-navbar-nav uk-visible@s">
                         <li><Link to="/">Find a Hike</Link></li>
                         <li>
                             <a href="#">My Account</a>
@@ -35,9 +31,25 @@ function Navbar() {
                             </div>
                         </li>
                     </ul>
+                    <a href="#" className="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" id="hamburger"><i className="fas fa-bars fa-lg"></i></a>
                 </div>
 
             </nav>
+
+            <div id="sidenav" uk-offcanvas="flip: true; overlay: true" className="uk-offcanvas">
+                <div className="uk-offcanvas-bar">
+
+                    <button className="uk-offcanvas-close" type="button" uk-close="true"></button>
+
+                    <ul className="uk-nav">
+                        <li><Link to="/">Find a Hike</Link></li>
+                        <li><Link to="/dashboard">Dashboard</Link></li>
+                        <li><Link to="/signup">Signup</Link></li>
+                        <li><Link to="/login">Login</Link></li>
+                        <li><Link to="/">Logout</Link></li>
+                    </ul>
+                </div>
+            </div>
 
             <div className="bottomBar uk-container-expand"></div>
         </div>

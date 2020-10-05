@@ -9,12 +9,12 @@
 }
 
 .uk-logo {
-    font-size: 40px;
+    font-size: 25px;
 }
 
 .mountains {
-    margin: 10px;
-    height: 100px;
+    margin: -5px 5px;
+    height: 90px;
     opacity: 0.9;
 }
 
@@ -32,4 +32,8 @@
     padding: 5px;
     height: 30px;
     margin: 0px;
+}
+
+#hamburger {
+    color: white;
 }
