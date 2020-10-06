@@ -1,11 +1,8 @@
-.footer {
-    height: 200px;
-    margin-top: 200px;
-    /* background-color: #002409;
-    color: #fffec1; */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 50px;
 }
 
-.footer p {
-    padding: 75px;
-    font-size: larger;
+.findHikeCon {
+    margin-top: 50px;
 }

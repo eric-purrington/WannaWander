@@ -18,7 +18,7 @@ function Home() {
     const [sortBy, setSortBy] = useState("");
     const [gain, setGain] = useState("");
     const [approxDistance, setApproxDistance] = useState("");
-    const [lengthValue, setLengthValue] = useState("");
+    const [lengthValue, setLengthValue] = useState({min: 5, max: 10});
 
     useEffect(() => {
         if(queryParams.usersLat === 0) {
@@ -26,7 +26,7 @@ function Home() {
         } else {
           callAPI();
         }
-    }, [queryParams]);
+    }, [queryParams.usersLat]);
 
     function getLocation() {
         if (navigator.geolocation) {
@@ -54,26 +54,25 @@ function Home() {
         })
         setSortBy(event.target.sortby.value);
         setGain(event.target.gain.value);
+        callAPI();
     }
 
-    const onLengthChange = (event) => {
-      event.preventDefault();
-      setLengthValue(event.target.value);
+    const onLengthChange = (value) => {
+      setLengthValue(value);
     }
 
     function callAPI() {
-      console.log(queryParams);
-      // API.getTrails(queryParams).then(res => {
-      //   setResults(res.data.trails);
-      // });
+      API.getTrails(queryParams).then(res => {
+        setResults(res.data.trails);
+      });
     }
 
     return (
         <div className="uk-container-expand">
             <FindHikeCon>
                 <SearchBar onSearch={onSearch} lengthValue={lengthValue} onLengthChange={onLengthChange} />
-                <HikeCard />
-                {/* {results.map(hike => 
+                {/* <HikeCard /> */}
+                {results.map(hike => 
                     <HikeCard 
                         key={hike.id}
                         name={hike.name}
@@ -83,7 +82,7 @@ function Home() {
                         length={hike.length}
                         gain={hike.high - hike.low}
                     />
-                )} */}
+                )}
             </FindHikeCon>
         </div>
     )

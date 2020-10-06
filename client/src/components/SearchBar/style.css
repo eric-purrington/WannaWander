@@ -1,9 +1,27 @@
 .searchBar {
-    /* padding: 20px !important; */
-    background-color: rgba(11, 44, 15, 0.75) !important;
+    background-color: #1e6262 !important;
     color: white;
+    padding: 20px;
+    border-radius: 30px;
+    display: inline-block;
 }
 
-.uk-select {
-    /* margin: 10px; */
+.input-range {
+    color: black;
+}
+
+.input-range__track--active {
+    background: #b4f1f1 !important;
+}
+
+.input-range__slider {
+    background: #2d767f !important;
+    border-color: white !important;
+
+}
+
+h4 {
+    font-size: 15px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
 }
