@@ -7,7 +7,7 @@ function FindHikeCon(props) {
             <h1 className="uk-text-center">Find your next adventure</h1>
             {/* <div class="uk-grid-small uk-grid uk-child-width-1-2@m" uk-grid="true"> */}
                 {props.children[0]}
-                <div className="uk-child-width-1-2">
+                <div class="uk-grid-large uk-grid uk-child-width-1-3@l">
                     {props.children.slice(1)}
                 </div>
             {/* </div> */}

@@ -5,7 +5,7 @@ import "./style.css";
 
 function SearchBar(props) {
     return (
-        <div className="uk-container-expand searchBar uk-width-1-3@l">
+        <div className="uk-container-expand searchBar uk-width-1-4@l">
             <form className="uk-form" onSubmit={props.onSearch}>
                 {/* <div class="uk-grid-large uk-grid uk-child-width-1-3@s" uk-grid="true"> */}
 
@@ -33,7 +33,7 @@ function SearchBar(props) {
                         <h4 className="uk-text-center">Distance from you</h4>
                         <InputRange
                             formatLabel={value => `${value} mi`}
-                            maxValue={50}
+                            maxValue={200}
                             minValue={0}
                             value={props.distanceValue} 
                             onChange={props.onDistanceChange} />

@@ -16,9 +16,10 @@ function Home() {
         maxResults: 10
     });
     const [sortBy, setSortBy] = useState("");
-    const [gain, setGain] = useState("");
     const [approxDistance, setApproxDistance] = useState("");
-    const [lengthValue, setLengthValue] = useState({min: 5, max: 10});
+    const [lengthValue, setLengthValue] = useState({min: 0, max: 10});
+    const [gainValue, setGainValue] = useState({min: 0, max: 3000});
+    const [distanceValue, setDistanceValue] = useState({min: 0, max: 50});
 
     useEffect(() => {
         if(queryParams.usersLat === 0) {
@@ -53,7 +54,6 @@ function Home() {
             maxResults: event.target.maxResults.value
         })
         setSortBy(event.target.sortby.value);
-        setGain(event.target.gain.value);
         callAPI();
     }
 
@@ -61,18 +61,34 @@ function Home() {
       setLengthValue(value);
     }
 
+    const onGainChange = (value) => {
+      setGainValue(value);
+    }
+    
+    const onDistanceChange = (value) => {
+      setDistanceValue(value);
+    }
+
     function callAPI() {
-      API.getTrails(queryParams).then(res => {
-        setResults(res.data.trails);
-      });
+      // API.getTrails(queryParams).then(res => {
+      //   setResults(res.data.trails);
+      // });
     }
 
     return (
         <div className="uk-container-expand">
             <FindHikeCon>
-                <SearchBar onSearch={onSearch} lengthValue={lengthValue} onLengthChange={onLengthChange} />
-                {/* <HikeCard /> */}
-                {results.map(hike => 
+                <SearchBar 
+                  onSearch={onSearch} 
+                  lengthValue={lengthValue} 
+                  onLengthChange={onLengthChange} 
+                  gainValue={gainValue} 
+                  onGainChange={onGainChange} 
+                  distanceValue={distanceValue} 
+                  onDistanceChange={onDistanceChange} 
+                />
+                <HikeCard />
+                {/* {results.map(hike => 
                     <HikeCard 
                         key={hike.id}
                         name={hike.name}
@@ -82,7 +98,7 @@ function Home() {
                         length={hike.length}
                         gain={hike.high - hike.low}
                     />
-                )}
+                )} */}
             </FindHikeCon>
         </div>
     )
