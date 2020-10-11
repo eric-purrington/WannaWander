@@ -6,7 +6,6 @@ import API from "../utils/API";
 import Distance from "../utils/Distance";
 
 function Home() {
-    const [results, setResults] = useState([]);
     const [queryParams, setQueryParams] = useState({
         usersLat: 0,
         usersLon: 0,
@@ -15,14 +14,15 @@ function Home() {
         minLength: 0,
         maxResults: 10
     });
+    const [results, setResults] = useState([]);
     const [sortBy, setSortBy] = useState("");
-    const [approxDistance, setApproxDistance] = useState("");
     const [lengthValue, setLengthValue] = useState({min: 0, max: 10});
     const [gainValue, setGainValue] = useState({min: 0, max: 3000});
     const [distanceValue, setDistanceValue] = useState({min: 0, max: 50});
 
     useEffect(() => {
-        if(queryParams.usersLat === 0) {
+        console.log(queryParams.usersLat)
+        if (queryParams.usersLat === 0) {
           getLocation();
         } else {
           callAPI();
@@ -48,9 +48,9 @@ function Home() {
         event.preventDefault();
         console.log(event.target)
         setQueryParams({...queryParams,
-            maxDistance: event.target.distance.value,
+            // maxDistance: event.target.distance.value,
             minStars: event.target.ratingMin.value,
-            minLength: event.target.length.value,
+            // minLength: event.target.length.value,
             maxResults: event.target.maxResults.value
         })
         setSortBy(event.target.sortby.value);
@@ -58,39 +58,58 @@ function Home() {
     }
 
     const onLengthChange = (value) => {
-      setLengthValue(value);
+        setLengthValue(value);
     }
 
     const onGainChange = (value) => {
-      setGainValue(value);
+        setGainValue(value);
     }
     
     const onDistanceChange = (value) => {
-      setDistanceValue(value);
+        setDistanceValue(value);
     }
 
     function callAPI() {
-      // API.getTrails(queryParams).then(res => {
-      //   setResults(res.data.trails);
-      // });
+        console.log("something")
+      API.getTrails(queryParams).then(res => {
+        setResults(res.data.trails);
+        console.log(res)
+      });
+    //   findApproxDistances();
+        // findWeather();
     }
+
+    function findApproxDistances() {
+      for (var i = 0; i < results.length; i++) {
+        let distance = {"distance": Distance.findDistanceBetween(queryParams.usersLat, queryParams.usersLon, results[i].latitude, results[i].longitude)};
+        results[i].push(distance);
+      }
+    }
+
+    // function findWeather() {
+    //   for (var i = 0; i < results.length; i++) {
+    //     let weather = {"weather": API.getWeather(results[i].latitude, results[i].longitude)};
+    //     results[i].push(weather);
+    //   }
+    // }
 
     return (
         <div className="uk-container-expand">
             <FindHikeCon>
                 <SearchBar 
-                  onSearch={onSearch} 
-                  lengthValue={lengthValue} 
-                  onLengthChange={onLengthChange} 
-                  gainValue={gainValue} 
-                  onGainChange={onGainChange} 
-                  distanceValue={distanceValue} 
-                  onDistanceChange={onDistanceChange} 
+                    onSearch={onSearch} 
+                    lengthValue={lengthValue} 
+                    onLengthChange={onLengthChange} 
+                    gainValue={gainValue} 
+                    onGainChange={onGainChange} 
+                    distanceValue={distanceValue} 
+                    onDistanceChange={onDistanceChange} 
                 />
-                <HikeCard />
-                {/* {results.map(hike => 
+                {/* <HikeCard /> */}
+                {results.map(hike => 
                     <HikeCard 
                         key={hike.id}
+                        id={hike.id}
                         name={hike.name}
                         img={hike.imgMedium}
                         rating={hike.stars}
@@ -98,7 +117,7 @@ function Home() {
                         length={hike.length}
                         gain={hike.high - hike.low}
                     />
-                )} */}
+                )}
             </FindHikeCon>
         </div>
     )
