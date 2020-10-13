@@ -113,9 +113,12 @@ function Home() {
                         name={hike.name}
                         img={hike.imgMedium}
                         rating={hike.stars}
+                        location={hike.location}
                         summary={hike.summary}
                         length={hike.length}
                         gain={hike.high - hike.low}
+                        longitude={hike.longitude}
+                        latitude={hike.latitude}
                     />
                 )}
             </FindHikeCon>

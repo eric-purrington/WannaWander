@@ -5,19 +5,20 @@ import HikeCard from "../components/HikeCard";
 import API from "../utils/API";
 import Distance from "../utils/Distance";
 
-function HikeMe() {
+function HikeMe(props) {
     const clickedHikeId = window.location.href.split("/hikeme/")[1];
     const [clickedHikesInfo, setClickedHikesInfo] = useState({});
 
     useEffect(() => {
-        callAPI();
+        // callAPI();
+        console.log(props.location.hikeProps)
     }, []);
 
-    function callAPI() {
-      API.getTrailsById(clickedHikeId).then(res => {
-        setClickedHikesInfo(res.data.trails[0]);
-      });
-    }
+    // function callAPI() {
+    //   API.getTrailsById(clickedHikeId).then(res => {
+    //     setClickedHikesInfo(res.data.trails[0]);
+    //   });
+    // }
     return (
         <div className="uk-container-expand">
 
