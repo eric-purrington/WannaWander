@@ -18,10 +18,9 @@ function Home() {
     const [sortBy, setSortBy] = useState("");
     const [lengthValue, setLengthValue] = useState({min: 0, max: 10});
     const [gainValue, setGainValue] = useState({min: 0, max: 3000});
-    const [distanceValue, setDistanceValue] = useState({min: 0, max: 50});
+    const [distanceValue, setDistanceValue] = useState(50);
 
     useEffect(() => {
-        console.log(queryParams.usersLat)
         if (queryParams.usersLat === 0) {
           getLocation();
         } else {
@@ -70,10 +69,8 @@ function Home() {
     }
 
     function callAPI() {
-        console.log("something")
       API.getTrails(queryParams).then(res => {
         setResults(res.data.trails);
-        console.log(res)
       });
     //   findApproxDistances();
         // findWeather();

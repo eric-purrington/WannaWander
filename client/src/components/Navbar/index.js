@@ -21,14 +21,14 @@ function Navbar() {
                         <li><Link to="/">Find a Hike</Link></li>
                         <li>
                             <a href="#">My Account</a>
-                            <div className="uk-navbar-dropdown">
+                            {/* <div className="uk-navbar-dropdown">
                                 <ul className="uk-nav uk-navbar-dropdown-nav">
                                     <li><Link to="/dashboard">Dashboard</Link></li>
                                     <li><Link to="/signup">Signup</Link></li>
                                     <li><Link to="/login">Login</Link></li>
                                     <li><Link to="/">Logout</Link></li>
                                 </ul>
-                            </div>
+                            </div> */}
                         </li>
                     </ul>
                     <a href="#" className="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" id="hamburger"><i className="fas fa-bars fa-lg"></i></a>
@@ -43,10 +43,10 @@ function Navbar() {
 
                     <ul className="uk-nav">
                         <li><Link to="/">Find a Hike</Link></li>
-                        <li><Link to="/dashboard">Dashboard</Link></li>
+                        {/* <li><Link to="/dashboard">Dashboard</Link></li>
                         <li><Link to="/signup">Signup</Link></li>
                         <li><Link to="/login">Login</Link></li>
-                        <li><Link to="/">Logout</Link></li>
+                        <li><Link to="/">Logout</Link></li> */}
                     </ul>
                 </div>
             </div>

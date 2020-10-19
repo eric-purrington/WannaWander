@@ -6,12 +6,13 @@ import API from "../utils/API";
 import Distance from "../utils/Distance";
 
 function HikeMe(props) {
-    const clickedHikeId = window.location.href.split("/hikeme/")[1];
-    const [clickedHikesInfo, setClickedHikesInfo] = useState({});
+    // const clickedHikeId = window.location.href.split("/hikeme/")[1];
+    const {name, img, rating, summary, length, gain, longitude, latitude, location} = props.location.hikeProps;
 
     useEffect(() => {
         // callAPI();
-        console.log(props.location.hikeProps)
+        console.log(props.location.hikeProps);
+        console.log(name);
     }, []);
 
     // function callAPI() {
@@ -21,7 +22,7 @@ function HikeMe(props) {
     // }
     return (
         <div className="uk-container-expand">
-
+            
         </div>
     )
 }

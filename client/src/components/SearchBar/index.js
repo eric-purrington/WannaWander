@@ -34,29 +34,8 @@ function SearchBar(props) {
                         <InputRange
                             formatLabel={value => `${value} mi`}
                             maxValue={200}
-                            minValue={0}
                             value={props.distanceValue} 
                             onChange={props.onDistanceChange} />
-                    </div>
-                    
-                    <div className="uk-first-column">
-                        <h4 className="uk-text-center">Sort By</h4>
-                        <select className="uk-select" name="sortby" id="sortby">
-                            <option value="Quality">Quality</option>
-                            <option value="Distance">Distance</option>
-                            <option value="Length">Length</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <h4 className="uk-text-center"># of Results</h4>
-                        <select className="uk-select" name="maxResults" id="maxResults">
-                            <option value="10">10</option>
-                            <option value="50">50</option>
-                            <option value="100">100</option>
-                            <option value="250">250</option>
-                            <option value="500">500</option>
-                        </select>
                     </div>
 
                     <div>
@@ -67,6 +46,25 @@ function SearchBar(props) {
                             <option value="2">At least 2 stars</option>
                             <option value="3">At least 3 stars</option>
                             <option value="4">At least 4 stars</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <h4 className="uk-text-center"># of Results</h4>
+                        <select className="uk-select" name="maxResults" id="maxResults">
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                            <option value="250">250</option>
+                            <option value="500">500</option>
+                        </select>
+                    </div>
+
+                    <div className="uk-first-column">
+                        <h4 className="uk-text-center">Sort By</h4>
+                        <select className="uk-select" name="sortby" id="sortby">
+                            <option value="Quality">Quality</option>
+                            <option value="Distance">Distance</option>
+                            <option value="Length">Length</option>
                         </select>
                     </div>
 
@@ -91,7 +89,7 @@ function SearchBar(props) {
                         <span>200+ mi.</span>
                     </div> */}
 
-                    {/* <button className="uk-button uk-button-default"><span uk-icon="icon: search; ratio: 1"></span></button> */}
+                    <button className="uk-button uk-button-default"><span uk-icon="icon: search; ratio: 1"></span></button>
                 {/* </div> */}
             </form>
         </div>
