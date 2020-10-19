@@ -1,3 +1,7 @@
 .hikeCard {
-    display: inline-block;
+    margin: 10px auto;
+}
+
+.hikeName {
+    color: #1e6262 !important;
 }

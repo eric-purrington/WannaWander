@@ -5,10 +5,10 @@ import "./style.css";
 
 function SearchBar(props) {
     return (
-        <div className="uk-container-expand searchBar uk-width-1-4@l">
+        <div className="uk-container searchBar uk-width-1-3@m uk-width-1-1@s">
             <form className="uk-form" onSubmit={props.onSearch}>
-                {/* <div class="uk-grid-large uk-grid uk-child-width-1-3@s" uk-grid="true"> */}
-
+                {/* <div class="uk-grid-large uk-grid uk-child-width-1-1@ uk-child-width-1-3@s" uk-grid="true"> */}
+                    <h3 className="uk-text-center searchHead">Search Hikes</h3>
                     <div className="uk-first-column lengthInputRange">
                         <h4 className="uk-text-center">Length</h4>
                         <InputRange
@@ -89,7 +89,10 @@ function SearchBar(props) {
                         <span>200+ mi.</span>
                     </div> */}
 
-                    <button className="uk-button uk-button-default"><span uk-icon="icon: search; ratio: 1"></span></button>
+                    <div>
+                        <button className="uk-align-center uk-button uk-button-default searchBtn"><span uk-icon="icon: search; ratio: 1"></span></button>
+                    </div>
+                    
                 {/* </div> */}
             </form>
         </div>

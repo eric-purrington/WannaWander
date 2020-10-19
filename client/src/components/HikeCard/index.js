@@ -18,8 +18,8 @@ function HikeCard(props) {
         }
     }
     return (
-        <div className="uk-card uk-text-center uk-card-default uk-card-body uk-first-column hikeCard">
-            <h2 className="hikeName"><Link to={linkObj}>{props.name}</Link></h2>
+        <div className="uk-card uk-text-center uk-card-default uk-card-body uk-align-center hikeCard">
+            <h2 className="hikeName"><Link className="hikeName" to={linkObj}>{props.name}</Link></h2>
 
             <div className="uk-inline uk-transition-toggle">
                 <Link to={linkObj}><img className="hikeImg" src={props.img} alt={props.name} /></Link>
