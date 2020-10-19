@@ -12,7 +12,7 @@ function Home() {
         maxDistance: 30,
         minStars: 0,
         minLength: 0,
-        maxResults: 10
+        maxResults: 50
     });
     const [results, setResults] = useState([]);
     const [sortBy, setSortBy] = useState("");
@@ -47,9 +47,9 @@ function Home() {
         event.preventDefault();
         console.log(event.target)
         setQueryParams({...queryParams,
-            // maxDistance: event.target.distance.value,
+            maxDistance: distanceValue,
             minStars: event.target.ratingMin.value,
-            // minLength: event.target.length.value,
+            minLength: lengthValue.min,
             maxResults: event.target.maxResults.value
         })
         setSortBy(event.target.sortby.value);
@@ -70,16 +70,30 @@ function Home() {
 
     function callAPI() {
       API.getTrails(queryParams).then(res => {
-        setResults(res.data.trails);
+        let filteredRes = res.data.trails.filter(hike => {
+          if (hike.length <= lengthValue.max &&
+             hike.length >= lengthValue.min && 
+             hike.high-hike.low <= gainValue.max && 
+             hike.high-hike.low >= gainValue.min) {
+            return true
+          }
+          return false;
+        });
+        findApproxDistances(filteredRes);
+        // setResults(filteredRes);
       });
     //   findApproxDistances();
         // findWeather();
     }
 
-    function findApproxDistances() {
-      for (var i = 0; i < results.length; i++) {
-        let distance = {"distance": Distance.findDistanceBetween(queryParams.usersLat, queryParams.usersLon, results[i].latitude, results[i].longitude)};
-        results[i].push(distance);
+    function findApproxDistances(filteredRes) {
+      for (var i = 0; i < filteredRes.length; i++) {
+        let distanceBetween = Distance.findDistanceBetween(queryParams.usersLat, queryParams.usersLon, filteredRes[i].latitude, filteredRes[i].longitude);
+        filteredRes[i].distance = distanceBetween;
+      }
+      if (i = filteredRes.length-1) {
+        console.log(filteredRes)
+        setResults(filteredRes);
       }
     }
 
