@@ -45,7 +45,6 @@ function Home() {
 
     const onSearch = (event) => {
         event.preventDefault();
-        console.log(event.target)
         setQueryParams({...queryParams,
             maxDistance: distanceValue,
             minStars: event.target.ratingMin.value,
@@ -80,10 +79,7 @@ function Home() {
           return false;
         });
         findApproxDistances(filteredRes);
-        // setResults(filteredRes);
       });
-    //   findApproxDistances();
-        // findWeather();
     }
 
     function findApproxDistances(filteredRes) {
@@ -97,13 +93,6 @@ function Home() {
       }
     }
 
-    // function findWeather() {
-    //   for (var i = 0; i < results.length; i++) {
-    //     let weather = {"weather": API.getWeather(results[i].latitude, results[i].longitude)};
-    //     results[i].push(weather);
-    //   }
-    // }
-
     return (
         <div className="uk-container-expand">
             <FindHikeCon>
@@ -116,7 +105,6 @@ function Home() {
                     distanceValue={distanceValue} 
                     onDistanceChange={onDistanceChange} 
                 />
-                {/* <HikeCard /> */}
                 {results.map(hike => 
                     <HikeCard 
                         key={hike.id}

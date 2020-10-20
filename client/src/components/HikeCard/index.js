@@ -18,20 +18,13 @@ function HikeCard(props) {
         }
     }
     return (
-        <div className="uk-card uk-text-center uk-card-default uk-card-body uk-align-center hikeCard">
+        <div className="uk-text-center hikeCard">
             <h2 className="hikeName"><Link className="hikeName" to={linkObj}>{props.name}</Link></h2>
-
-            <div className="uk-inline uk-transition-toggle">
-                <Link to={linkObj}><img className="hikeImg" src={props.img} alt={props.name} /></Link>
-
-                <div className="uk-overlay uk-transition-fade uk-overlay-primary uk-position-bottom">
-                    <p className="hikeRatingDifficulty">Rating: {props.rating} stars</p>
-                </div>
-            </div>
-
-            <p className="hikeSummary">{props.summary}</p>
-
+            <Link to={linkObj}><img className="hikeImg" src={props.img} alt={props.name} /></Link>
+            <h3 className="hikeLocation">{props.location}</h3>
+            <p className="hikeRatingDifficulty">Rating: {props.rating} stars</p>
             <p className="hikeLengthGain">Length: {props.length} mi. Gain: {props.gain}'</p>
+            <hr/>
         </div>
     )
 }

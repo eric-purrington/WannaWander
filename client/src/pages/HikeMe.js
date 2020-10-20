@@ -20,6 +20,13 @@ function HikeMe(props) {
     //     setClickedHikesInfo(res.data.trails[0]);
     //   });
     // }
+
+    // function findWeather() {
+        //   for (var i = 0; i < results.length; i++) {
+        //     let weather = {"weather": API.getWeather(results[i].latitude, results[i].longitude)};
+        //     results[i].push(weather);
+        //   }
+        // }
     return (
         <div className="uk-container-expand">
             
