@@ -3,6 +3,17 @@
     border: none;
 }
 
-.hikeName, .hikeLocation {
+.hikeName {
     color: #1e6262 !important;
+    margin-bottom: 10px;
+}
+
+.hikeLocation {
+    margin-top: 10px;
+}
+
+.hikeImg {
+    border-radius: 30px;
+    display: block;
+    margin: 10px auto;
 }

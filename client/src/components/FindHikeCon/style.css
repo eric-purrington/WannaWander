@@ -1,14 +1,17 @@
 h1 {
     font-family: 'Montserrat', sans-serif;
+}
+
+.resultsHeader {
+    margin: 0px auto 20px;
+}
+
+.tread {
     margin-bottom: 100px;
 }
 
-/* p {
-    margin-bottom: 100px;
-} */
-
 .findHikeCon {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .searchAndResults {

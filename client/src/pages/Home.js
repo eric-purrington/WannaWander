@@ -110,14 +110,14 @@ function Home() {
                         key={hike.id}
                         id={hike.id}
                         name={hike.name}
-                        img={hike.imgMedium}
+                        lilimg={hike.imgSmallMed}
+                        bigimg={hike.imgSmallMed}
                         rating={hike.stars}
                         location={hike.location}
                         summary={hike.summary}
                         length={hike.length}
                         gain={hike.high - hike.low}
-                        longitude={hike.longitude}
-                        latitude={hike.latitude}
+                        distance={hike.distance}
                     />
                 )}
             </FindHikeCon>
