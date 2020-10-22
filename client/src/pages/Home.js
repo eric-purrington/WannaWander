@@ -7,23 +7,23 @@ import Distance from "../utils/Distance";
 
 function Home() {
     const [queryParams, setQueryParams] = useState({
-        usersLat: 0,
-        usersLon: 0,
+        usersLat: 40,
+        usersLon: -105,
         maxDistance: 30,
         minStars: 0,
         minLength: 0,
         maxResults: 50
     });
-    const [results, setResults] = useState([]);
+    const [results, setResults] = useState(JSON.parse(localStorage.getItem("persistingResults")) || []);
     const [sortBy, setSortBy] = useState("");
     const [lengthValue, setLengthValue] = useState({min: 0, max: 10});
     const [gainValue, setGainValue] = useState({min: 0, max: 3000});
     const [distanceValue, setDistanceValue] = useState(50);
 
     useEffect(() => {
-        if (queryParams.usersLat === 0) {
+        if (queryParams.usersLat === 40) {
           getLocation();
-        } else {
+        } else if (results[0] == null) {
           callAPI();
         }
     }, [queryParams.usersLat]);
@@ -88,8 +88,8 @@ function Home() {
         filteredRes[i].distance = distanceBetween;
       }
       if (i = filteredRes.length-1) {
-        console.log(filteredRes)
         setResults(filteredRes);
+        localStorage.setItem("persistingResults", JSON.stringify(filteredRes))
       }
     }
 
