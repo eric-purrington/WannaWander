@@ -7,8 +7,9 @@ function SearchBar(props) {
     return (
         <div className="uk-container searchBar uk-width-1-3@m uk-width-1-1@s">
             <form className="uk-form" onSubmit={props.onSearch}>
-                {/* <div class="uk-grid-large uk-grid uk-child-width-1-1@ uk-child-width-1-3@s" uk-grid="true"> */}
+                
                     <h3 className="uk-text-center searchHead">Search Hikes</h3>
+
                     <div className="uk-first-column lengthInputRange">
                         <h4 className="uk-text-center">Length</h4>
                         <InputRange
@@ -61,39 +62,17 @@ function SearchBar(props) {
 
                     <div className="uk-first-column">
                         <h4 className="uk-text-center">Sort By</h4>
-                        <select className="uk-select" name="sortby" id="sortby">
+                        <select className="uk-select" name="sortby" onChange={props.onSortChange} id="sortby">
                             <option value="Quality">Quality</option>
                             <option value="Distance">Distance</option>
                             <option value="Length">Length</option>
                         </select>
                     </div>
 
-                    {/* <div className="uk-first-column">
-                        <label className="uk-form-label" for="lengthRange">Length Range</label>
-                        <span>0 mi.</span>
-                        <input className="uk-range" id="lengthRange" type="range" defaultValue="0" min="0" max="100" step="1" name="length" uk-tooltip={props.lengthValue} onChange={props.onLengthChange}/>
-                        <span>100+ mi.</span>
-                    </div> */}
-
-                    {/* <div className="">
-                        <label className="uk-form-label" for="gainRange">Elevation Gain</label>
-                        <span>0 mi.</span>
-                        <input className="uk-range" id="gainRange" type="range" defaultValue="3000" min="0" max="5000" step="100" name="gain"/>
-                        <span>5000+ mi.</span>
-                    </div>
-                    
-                    <div className="">
-                        <label className="uk-form-label" for="distanceRange">Distance from you</label>
-                        <span>0 mi.</span>
-                        <input className="uk-range" id="distanceRange" type="range" defaultValue="30" min="0" max="200" step="100" name="distance"/>
-                        <span>200+ mi.</span>
-                    </div> */}
-
                     <div>
                         <button className="uk-align-center uk-button uk-button-default searchBtn"><span uk-icon="icon: search; ratio: 1"></span></button>
                     </div>
-                    
-                {/* </div> */}
+
             </form>
         </div>
     )

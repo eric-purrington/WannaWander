@@ -50,8 +50,7 @@ function Home() {
             minStars: event.target.ratingMin.value,
             minLength: lengthValue.min,
             maxResults: event.target.maxResults.value
-        })
-        setSortBy(event.target.sortby.value);
+        });
         callAPI();
     }
 
@@ -67,14 +66,19 @@ function Home() {
         setDistanceValue(value);
     }
 
+    const onSortChange = (event) => {
+      setSortBy(event.target.value);
+    }
+
     function callAPI() {
+      console.log("api called")
       API.getTrails(queryParams).then(res => {
         let filteredRes = res.data.trails.filter(hike => {
           if (hike.length <= lengthValue.max &&
-             hike.length >= lengthValue.min && 
+            //  hike.length >= lengthValue.min && 
              hike.high-hike.low <= gainValue.max && 
              hike.high-hike.low >= gainValue.min) {
-            return true
+            return true;
           }
           return false;
         });
@@ -87,7 +91,17 @@ function Home() {
         let distanceBetween = Distance.findDistanceBetween(queryParams.usersLat, queryParams.usersLon, filteredRes[i].latitude, filteredRes[i].longitude);
         filteredRes[i].distance = distanceBetween;
       }
-      if (i = filteredRes.length-1) {
+      if (i = filteredRes.length - 1) {
+        switch(sortBy) {
+          case "Distance":
+            filteredRes.sort((a, b) => a.distance - b.distance)
+            break;
+          case "Length":
+            filteredRes.sort((a, b) => a.length - b.length)
+            break;
+          default:
+            filteredRes.sort((a, b) => b.stars - a.stars)
+        }
         setResults(filteredRes);
         localStorage.setItem("persistingResults", JSON.stringify(filteredRes))
       }
@@ -103,7 +117,8 @@ function Home() {
                     gainValue={gainValue} 
                     onGainChange={onGainChange} 
                     distanceValue={distanceValue} 
-                    onDistanceChange={onDistanceChange} 
+                    onDistanceChange={onDistanceChange}
+                    onSortChange={onSortChange} 
                 />
                 {results.map(hike => 
                     <HikeCard 

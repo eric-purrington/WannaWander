@@ -13,14 +13,14 @@ function Navbar() {
             <nav className="uk-navbar-container uk-navbar uk-margin" uk-navbar="true">
 
                 <div className="uk-navbar-left">
-                    <a className="uk-navbar-item uk-logo" href="#"><img className="mountains" alt="mountains" src={mountains}/> Wanna Wander?</a>
+                    <a className="uk-navbar-item uk-logo" href="/"><img className="mountains" alt="mountains" src={mountains}/> Wanna Wander?</a>
                 </div>
 
                 <div className="uk-navbar-right">
                     <ul className="uk-navbar-nav uk-visible@s">
                         <li><Link to="/">Find a Hike</Link></li>
                         <li>
-                            <a href="#">My Account</a>
+                            <a href="/">My Account</a>
                             {/* <div className="uk-navbar-dropdown">
                                 <ul className="uk-nav uk-navbar-dropdown-nav">
                                     <li><Link to="/dashboard">Dashboard</Link></li>
@@ -31,7 +31,7 @@ function Navbar() {
                             </div> */}
                         </li>
                     </ul>
-                    <a href="#" className="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" id="hamburger"><i className="fas fa-bars fa-lg"></i></a>
+                    <a href="/" className="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" id="hamburger"><i className="fas fa-bars fa-lg"></i></a>
                 </div>
 
             </nav>
