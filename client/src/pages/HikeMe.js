@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import MapCon from "../components/MapCon";
 import API from "../utils/API";
 
 function HikeMe(props) {
-    // const clickedHikeId = window.location.href.split("/hikeme/")[1];
-    // const {name, img, rating, summary, length, gain, longitude, latitude, location} = props.location.hikeProps;
+    const {name, bigimg, rating, summary, length, gain, distance, location} = props.location.hikeProps;
+    const gMapsURL = "https://www.google.com/maps/dir/?api=1&destination=" + name;
 
-    // useEffect(() => {
-    //     console.log(props.location.hikeProps);
-    //     console.log(name);
-    // }, []);
+    useEffect(() => {
+
+    }, []);
 
     // function findWeather() {
         //   for (var i = 0; i < results.length; i++) {
@@ -18,7 +18,16 @@ function HikeMe(props) {
         // }
     return (
         <div className="uk-container-expand">
-            
+            <h1>{name}</h1>
+            <h2>{location}</h2>
+            <img src={bigimg} alt={name} />
+            <a href={gMapsURL} target="blank">Get Directions</a>
+
+
+
+
+
+            <MapCon />
         </div>
     )
 }

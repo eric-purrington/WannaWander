@@ -41,7 +41,7 @@ function SearchBar(props) {
 
                     <div>
                         <h4 className="uk-text-center">Minimum Rating</h4>
-                        <select className="uk-select" name="ratingMin" id="ratingMin">
+                        <select className="uk-select" name="ratingMin" onChange={props.onStarChange} id="ratingMin">
                             <option value="0">No minimum</option>
                             <option value="1">At least 1 star</option>
                             <option value="2">At least 2 stars</option>
@@ -52,7 +52,7 @@ function SearchBar(props) {
 
                     <div>
                         <h4 className="uk-text-center"># of Results</h4>
-                        <select className="uk-select" name="maxResults" id="maxResults">
+                        <select className="uk-select" name="maxResults" onChange={props.onResultChange} id="maxResults">
                             <option value="50">50</option>
                             <option value="100">100</option>
                             <option value="250">250</option>

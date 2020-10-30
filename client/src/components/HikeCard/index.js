@@ -7,17 +7,19 @@ function HikeCard(props) {
         pathname: `/hikeme/${props.id}`,
         hikeProps: {
             name: `${props.name}`,
-            bigimg: `${props.img}`,
+            bigimg: `${props.bigimg}`,
             rating: `${props.rating}`,
             summary: `${props.summary}`,
             length: `${props.length}`,
             gain: `${props.gain}`,
             distance: `${props.distance}`,
+            longitude: `${props.longitude}`,
+            latitude: `${props.latitude}`,
             location: `${props.location}`
         }
     }
     return (
-        <div className="hikeCard">
+        <div className="hikeCard uk-container-expand">
             <hr/>
             <h2 className="hikeName uk-text-center"><Link className="hikeName" to={linkObj}>{props.name}</Link></h2>
             <h3 className="hikeLocation uk-text-center">{props.location}</h3>
