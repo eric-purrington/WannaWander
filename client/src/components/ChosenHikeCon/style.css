@@ -1,0 +1,17 @@
+.hikeInfoGrid {
+    margin: 30px 200px;
+}
+
+.chosenHikeCon {
+    margin-top: 50px;
+}
+
+.chosenHikeLocation {
+    margin: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.chosenHikeImg {
+    border-radius: 50px;
+}
+

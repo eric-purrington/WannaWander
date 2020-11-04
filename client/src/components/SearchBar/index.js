@@ -11,7 +11,7 @@ function SearchBar(props) {
                     <h3 className="uk-text-center searchHead">Search Hikes</h3>
 
                     <div className="uk-first-column lengthInputRange">
-                        <h4 className="uk-text-center">Length</h4>
+                        <h4 className="uk-text-center inputHead">Length</h4>
                         <InputRange
                             formatLabel={value => `${value} mi`}
                             maxValue={50}
@@ -21,7 +21,7 @@ function SearchBar(props) {
                     </div>
 
                     <div className="gainInputRange">
-                        <h4 className="uk-text-center">Elevation Gain</h4>
+                        <h4 className="uk-text-center inputHead">Elevation Gain</h4>
                         <InputRange
                             formatLabel={value => `${value} ft`}
                             maxValue={5000}
@@ -31,7 +31,7 @@ function SearchBar(props) {
                     </div>
 
                     <div className="distanceInputRange">
-                        <h4 className="uk-text-center">Distance from you</h4>
+                        <h4 className="uk-text-center inputHead">Distance from you</h4>
                         <InputRange
                             formatLabel={value => `${value} mi`}
                             maxValue={200}
@@ -40,7 +40,7 @@ function SearchBar(props) {
                     </div>
 
                     <div>
-                        <h4 className="uk-text-center">Minimum Rating</h4>
+                        <h4 className="uk-text-center inputHead">Minimum Rating</h4>
                         <select className="uk-select" name="ratingMin" onChange={props.onStarChange} id="ratingMin">
                             <option value="0">No minimum</option>
                             <option value="1">At least 1 star</option>
@@ -51,7 +51,7 @@ function SearchBar(props) {
                     </div>
 
                     <div>
-                        <h4 className="uk-text-center"># of Results</h4>
+                        <h4 className="uk-text-center inputHead"># of Results</h4>
                         <select className="uk-select" name="maxResults" onChange={props.onResultChange} id="maxResults">
                             <option value="50">50</option>
                             <option value="100">100</option>
@@ -61,7 +61,7 @@ function SearchBar(props) {
                     </div>
 
                     <div className="uk-first-column">
-                        <h4 className="uk-text-center">Sort By</h4>
+                        <h4 className="uk-text-center inputHead">Sort By</h4>
                         <select className="uk-select" name="sortby" onChange={props.onSortChange} id="sortby">
                             <option value="Quality">Quality</option>
                             <option value="Distance">Distance</option>

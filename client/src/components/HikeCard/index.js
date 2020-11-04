@@ -9,6 +9,7 @@ function HikeCard(props) {
             name: `${props.name}`,
             bigimg: `${props.bigimg}`,
             rating: `${props.rating}`,
+            ratingRating: `${props.ratingRating}`,
             summary: `${props.summary}`,
             length: `${props.length}`,
             gain: `${props.gain}`,
@@ -28,8 +29,8 @@ function HikeCard(props) {
                     {props.lilimg ? <Link to={linkObj}><img className="hikeImg" src={props.lilimg} alt={props.name} /></Link> : <Link to={linkObj}><img className="hikeImg" src="https://via.placeholder.com/300/1e6262/b4f1f1?text=Image+Not+Found" alt={props.name} /></Link>}
                 </div>
                 <div className="hikeInfo">
-                    <p className="hikeRatingDifficulty">Rating: {props.rating} stars</p>
-                    <p className="hikeDistance">Distance: {props.distance} mi.</p>
+                    <p className="hikeRatingDifficulty">Rating: {props.rating} stars ({props.ratingRating} votes)</p>
+                    <p className="hikeDistance">Distance: ~ {props.distance} mi.</p>
                     <p className="hikeLength">Length: {props.length} mi.</p>
                     <p className="hikeGain">Gain: {props.gain} ft.</p>
                 </div>

@@ -11,7 +11,7 @@ export default {
         const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
         const distance = (earthR * c) / 1609.344;
-        const distanceRounded = Math.round(100 * distance) / 100;
+        const distanceRounded = Math.round(10 * distance) / 10;
         return distanceRounded;
     }
 };

@@ -137,8 +137,9 @@ function Home() {
                         id={hike.id}
                         name={hike.name}
                         lilimg={hike.imgSmallMed}
-                        bigimg={hike.imgSmallMed}
+                        bigimg={hike.imgMedium}
                         rating={hike.stars}
+                        ratingRating={hike.starVotes}
                         location={hike.location}
                         summary={hike.summary}
                         length={hike.length}
