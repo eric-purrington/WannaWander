@@ -4,7 +4,7 @@ import "./style.css";
 function FindHikeCon(props) {
     return (
         <div className="uk-container-expand findHikeCon">
-            <h1 className="uk-text-center">Find your next adventure</h1>
+            <h1 className="uk-text-center">Find Your Adventure</h1>
             <p className="uk-text-center tread">Please tread gently and treat these places with respect.</p>
             <div className="searchAndResults uk-grid-large uk-grid" uk-grid="true">
                 {props.children[0]}

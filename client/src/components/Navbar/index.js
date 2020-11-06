@@ -13,7 +13,7 @@ function Navbar() {
             <nav className="uk-navbar-container uk-navbar uk-margin" uk-navbar="true">
 
                 <div className="uk-navbar-left">
-                    <a className="uk-navbar-item uk-logo" href="/"><img className="mountains" alt="mountains" src={mountains}/> Wanna Wander?</a>
+                    <a className="uk-navbar-item uk-logo" href="/"><img className="mountains" alt="mountains" src={mountains}/>&nbsp;Wanna Wander?</a>
                 </div>
 
                 <div className="uk-navbar-right">

@@ -1,5 +1,5 @@
 .uk-navbar, .uk-navbar-dropdown {
-    background-color: #1e6262 !important;
+    background-color: #0f1179 !important;
     margin: 0px !important;
 }
 
@@ -18,20 +18,12 @@
     opacity: 0.9;
 }
 
-.giveMeAHike {
-    color: #b4f1f1 !important;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.giveMeAHike:hover {
-    text-decoration: none;
-}
-
 .topBar, .bottomBar {
-    background-color: #b4f1f1 !important;
+    background-color: #0177d8 !important;
     padding: 5px;
     height: 23px;
     margin: 0px;
+    color: white;
 }
 
 #hamburger {

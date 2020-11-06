@@ -1,5 +1,5 @@
 .searchBar {
-    background-color: #1e6262 !important;
+    background-color: #0f1179 !important;
     color: white;
     padding: 20px;
     border-radius: 30px;
@@ -12,13 +12,12 @@
 }
 
 .input-range__track--active {
-    background: #b4f1f1 !important;
+    background: rgb(136, 217, 255) !important;
 }
 
 .input-range__slider {
-    background: #2d767f !important;
+    background: #0177d8 !important;
     border-color: white !important;
-
 }
 
 .inputHead {

@@ -1,4 +1,5 @@
 import React from "react";
+import Rating from "react-rating";
 import "./style.css";
 
 function ChosenHikeCon(props) {
@@ -13,10 +14,15 @@ function ChosenHikeCon(props) {
             <div className="hikeInfoGrid uk-grid uk-child-width-1-3" uk-grid="true">
                 <div className="uk-first-column">
                     <h4 className="hikeInfoHead">Rating</h4>
-                    <p>{rating} stars ({ratingRating} votes)</p>
+                    <p><Rating
+                            initialRating={rating}
+                            readonly
+                            emptySymbol={<i className="badStar fas fa-star"></i>}
+                            fullSymbol={<i className="goodStar fas fa-star"></i>}
+                        /> ({ratingRating} votes)</p>
                 </div>
                 <div>
-                    <h4 className="hikeInfoHead">Elevation</h4>
+                    <h4 className="hikeInfoHead">Elevation Gain</h4>
                     <p>{gain} ft.</p>
                 </div>
                 <div>

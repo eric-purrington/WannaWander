@@ -1,6 +1,6 @@
 /* Scrollbar changes*/
 ::-webkit-scrollbar {
-    width: 7px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -8,11 +8,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #012b00;
+    background: #0f1179;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #fffec1;
+    background: #0177d8;
 }
 
 body, html, #root{
