@@ -80,7 +80,6 @@ function Home() {
     }
 
     function callAPI() {
-        console.log(queryParams)
         API.getTrails(queryParams).then(res => {
             let filteredRes = res.data.trails.filter(hike => {
                 if (hike.length <= lengthValue.max &&
