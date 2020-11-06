@@ -5,8 +5,8 @@ function MapCon(props) {
     const gMapsURL = "https://www.google.com/maps/dir/?api=1&destination=" + props.name + "&travelmode=driving";
 
     return (
-        <div className="uk-container-expand uk-text-center">
-            <h3>Getting you there</h3>
+        <div className="uk-container-expand uk-text-center mapCon">
+            <h2>Getting you there</h2>
             <a href={gMapsURL} className="directionsLink" target="blank">Get Directions</a>
         </div>
     )
