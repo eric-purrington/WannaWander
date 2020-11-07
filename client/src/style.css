@@ -19,4 +19,5 @@ body, html, #root{
     height: 100%;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01)), url("assets/tree_bark.png");
 }
