@@ -31,7 +31,7 @@ function HikeMe(props) {
                 {alerts !== [] ? "" : <AlertCard key={weather.alerts[0].start} id={weather.alerts[0].start} alerts={weather.alerts[0]} />}
             </WeatherCon>
 
-            <MapCon name={name}/>
+            <MapCon name={name} longitude={longitude} latitude={latitude}/>
         </div>
     )
 }
