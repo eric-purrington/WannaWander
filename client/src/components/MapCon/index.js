@@ -1,5 +1,4 @@
 import React, {useEffect, useRef} from "react";
-// import dotenv from "dotenv";
 import mapboxgl from 'mapbox-gl';
 import "./style.css";
 
@@ -30,7 +29,7 @@ function MapCon(props) {
         <div className="uk-container-expand uk-text-center mapCon">
             <h2>Getting you there</h2>
             <a href={gMapsURL} className="directionsLink" target="blank">Get Directions</a>
-            <div className="map-container" ref={mapContainerRef} style={{height: "400px", maxWidth: "600px"}}/>
+            <div className="map-container" ref={mapContainerRef} style={{height: "400px", maxWidth: "600px", margin: "20px auto"}}/>
         </div>
     )
 }

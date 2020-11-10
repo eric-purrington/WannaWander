@@ -1,0 +1,15 @@
+{
+  "name": "WannaWander",
+  "short_name": "WannaWander",
+  "icons": [
+    {
+      "src": "images/mtIcon.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "start_url": "/",
+  "display": "standalone"
+}

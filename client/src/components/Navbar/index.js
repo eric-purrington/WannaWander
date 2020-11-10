@@ -10,7 +10,7 @@ function Navbar() {
                 <p>"Let's get out in natch!" - Nadia</p>
             </div>
 
-            <nav className="uk-navbar-container uk-navbar uk-margin" uk-navbar="true">
+            <nav className="uk-navbar-container uk-navbar uk-margin bg-custom" uk-navbar="true">
 
                 <div className="uk-navbar-left">
                     <a className="uk-navbar-item uk-logo" href="/"><img className="mountains" alt="mountains" src={mountains}/>&nbsp;Wanna Wander?</a>

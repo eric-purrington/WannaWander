@@ -1,5 +1,6 @@
 .searchBar {
-    background-color: #0f1179 !important;
+    /* background-color: #0f1179 !important; */
+    background: linear-gradient(0deg, rgba(1,119,216,1) 15%, rgba(15,17,121,1) 65%);
     color: white;
     padding: 20px;
     border-radius: 30px;
