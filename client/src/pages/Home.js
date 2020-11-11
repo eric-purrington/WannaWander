@@ -133,7 +133,6 @@ function Home() {
                 {results.map(hike => 
                     <HikeCard 
                         key={hike.id}
-                        id={hike.id}
                         name={hike.name}
                         lilimg={hike.imgSmallMed}
                         bigimg={hike.imgMedium}

@@ -4,7 +4,7 @@ import "./style.css";
 
 function MapCon(props) {
     mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_API;
-    const gMapsURL = "https://www.google.com/maps/dir/?api=1&destination=" + props.name + "&travelmode=driving";
+    const gMapsURL = "https://www.google.com/maps/dir/?api=1&destination=" + props.latitude + "," + props.longitude + "&travelmode=driving";
     const mapContainerRef = useRef(null);
 
     useEffect(() => {

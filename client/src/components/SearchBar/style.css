@@ -34,6 +34,12 @@
     margin-top: 25px;
     border-radius: 25px;
     background-color: rgb(255, 238, 0);
+    color: rgb(0, 70, 21);
+}
+
+.searchBtn:hover {
+    color: rgb(255, 238, 0);
+    border-color: rgb(255, 238, 0);
 }
 
 .searchHead {
