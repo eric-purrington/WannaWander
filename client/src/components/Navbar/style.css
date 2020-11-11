@@ -3,13 +3,16 @@
 }
 
 .bg-custom {
-    background: rgb(1,119,216) !important;
-    background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(0, 70, 21, 1) 75%) !important;
+    background: linear-gradient(90deg, rgb(0, 70, 21) 5%, rgb(255, 238, 0) 50%, rgb(0, 70, 21, 1) 95%) !important;
 }
 
 .uk-navbar-nav li a, .uk-logo {
     color: white !important;
     font-family: 'Montserrat', sans-serif;
+}
+
+.underConstruction:hover {
+    cursor: not-allowed !important;
 }
 
 .uk-logo {
@@ -23,9 +26,7 @@
 }
 
 .topBar, .bottomBar {
-    background-color: #0177d8 !important;
-    /* background: rgb(1,119,216); */
-    /* background: linear-gradient(270deg, rgba(1,119,216,1) 15%, rgba(15,17,121,1) 50%, rgba(2,0,36,1) 90%); */
+    background-color: rgb(0, 70, 21) !important;
     padding: 5px;
     height: 23px;
     margin: 0px;

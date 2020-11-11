@@ -20,7 +20,7 @@ function Navbar() {
                     <ul className="uk-navbar-nav uk-visible@s">
                         <li><Link to="/">Find a Hike</Link></li>
                         <li>
-                            <a href="/">My Account</a>
+                            <a className="underConstruction" href="/">My Account</a>
                             {/* <div className="uk-navbar-dropdown">
                                 <ul className="uk-nav uk-navbar-dropdown-nav">
                                     <li><Link to="/dashboard">Dashboard</Link></li>
@@ -51,7 +51,7 @@ function Navbar() {
                 </div>
             </div>
 
-            <div className="bottomBar uk-container-expand"></div>
+            {/* <div className="bottomBar uk-container-expand"></div> */}
         </div>
     )
 };

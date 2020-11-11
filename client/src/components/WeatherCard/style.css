@@ -1,14 +1,14 @@
 .weatherCard {
-    margin: 15px;
-    color: white;
-    background-color: #0177d8;
+    margin: 20px;
+    color: black !important;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 238, 0, 1) 50%) !important;
     border-radius: 50px;
 }
 
 .weatherCard:hover {
-    background-color: #0177d8 !important;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 238, 0, 1) 50%) !important;
 }
 
 .uk-card-title {
-    color: white !important;
+    color: black !important;
 }

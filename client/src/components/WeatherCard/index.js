@@ -9,12 +9,12 @@ function WeatherCard(props) {
     const sunriseDate = new Date(props.daysWeather.sunrise);
     const sunriseHours = sunriseDate.getHours();
     const sunriseMin = "0" + sunriseDate.getMinutes();
-    const sunriseTime = sunriseHours + ":" + sunriseMin.substr(-2)
+    const sunriseTime = sunriseHours + ":" + sunriseMin.substr(-2);
 
     const sunsetDate = new Date(props.daysWeather.sunset);
     const sunsetHours = sunsetDate.getHours();
     const sunsetMin = "0" + sunsetDate.getMinutes();
-    const sunsetTime = sunsetHours + ":" + sunsetMin.substr(-2)
+    const sunsetTime = sunsetHours + ":" + sunsetMin.substr(-2);
 
     return (
         <div className="weatherCard uk-card uk-card-default uk-card-hover uk-card-body">

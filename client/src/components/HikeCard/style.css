@@ -4,7 +4,7 @@
 }
 
 .hikeName {
-    color: #0f1179 !important;
+    color: white !important;
     margin-bottom: 10px;
 }
 
@@ -19,9 +19,9 @@
 }
 
 hr {
-    border: 1px solid rgb(36, 36, 36);
+    border: 1px solid rgb(255, 238, 0);
 }
 
 .goodStar {
-    color: gold;
+    color: rgb(255, 238, 0);
 }
