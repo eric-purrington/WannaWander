@@ -5,7 +5,7 @@ import "./style.css";
 
 function SearchBar(props) {
     return (
-        <div className="uk-container searchBar uk-width-1-3@m uk-width-1-1@s">
+        <div className="uk-container uk-first-column searchBar uk-width-1-3@m uk-width-1-1@s">
             <form className="uk-form" onSubmit={props.onSearch}>
                 
                     <h3 className="uk-text-center searchHead">Search Hikes</h3>

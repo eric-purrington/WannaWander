@@ -1,19 +1,31 @@
 h1 {
     font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 .resultsHeader {
-    margin: 0px auto 20px;
+    color: white;
+    padding: 0px !important;
 }
 
 .tread {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    color: white;
 }
 
 .findHikeCon {
     margin-top: 50px;
+    margin: 50px 30px;
 }
 
-.searchAndResults {
-    margin: 30px;
+.resultsList {
+    padding-left: 40px !important;
+    margin-top: 0px !important;
+}
+
+@media only screen and (max-width: 960px) {
+    .resultsList {
+        padding: 0px !important;
+        margin-top: 50px !important;
+    }
 }

@@ -25,8 +25,8 @@ function HikeCard(props) {
             <hr/>
             <h2 className="hikeName uk-text-center"><Link className="hikeName" to={linkObj}>{props.name}</Link></h2>
             <h3 className="hikeLocation uk-text-center">{props.location}</h3>
-            <div className="uk-grid uk-child-width-1-2" uk-grid="true">
-                <div className="uk-first-column">
+            <div className="uk-grid uk-child-width-1-2@s uk-child-width-1-1@xs" uk-grid="true">
+                <div className="uk-first-column hikePicDiv">
                     {props.lilimg ? <Link to={linkObj}><img className="hikeImg" src={props.lilimg} alt={props.name} /></Link> : <Link to={linkObj}><img className="hikeImg" src="https://via.placeholder.com/300/1e6262/b4f1f1?text=Image+Not+Found" alt={props.name} /></Link>}
                 </div>
                 <div className="hikeInfo">
@@ -37,9 +37,9 @@ function HikeCard(props) {
                             emptySymbol={<i className="badStar fas fa-star"></i>}
                             fullSymbol={<i className="goodStar fas fa-star"></i>}
                         /> ({props.ratingRating} votes)</p>
-                    <p className="hikeDistance">Distance: {props.distance} mi.</p>
-                    <p className="hikeLength">Length: {props.length} mi.</p>
-                    <p className="hikeGain">Gain: {props.gain} ft.</p>
+                    <p className="hikeDistance"><i class="fas fa-road"></i> Distance: {props.distance} mi.</p>
+                    <p className="hikeLength"><i class="fas fa-sign"></i> Length: {props.length} mi.</p>
+                    <p className="hikeGain"><i class="fas fa-mountain"></i> Gain: {props.gain} ft.</p>
                 </div>
             </div>
         </div>

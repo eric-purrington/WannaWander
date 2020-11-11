@@ -6,7 +6,8 @@
     border: 1px outset rgb(255, 238, 0);
     box-shadow: 3px 3px 5px rgb(255, 238, 0);
     display: inline-block;
-    max-height: 730px;
+    max-height: 750px;
+    margin-bottom: 50px !important;
 }
 
 .input-range {
@@ -32,8 +33,7 @@
 .searchBtn {
     margin-top: 25px;
     border-radius: 25px;
-    color: rgb(255, 238, 0);
-    border-color: rgb(255, 238, 0);
+    background-color: rgb(255, 238, 0);
 }
 
 .searchHead {

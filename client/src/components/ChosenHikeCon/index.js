@@ -13,6 +13,10 @@ function ChosenHikeCon(props) {
             <img className="chosenHikeImg" src={bigimg} alt={name} />
             <div className="hikeInfoGrid uk-grid uk-child-width-1-3" uk-grid="true">
                 <div className="uk-first-column">
+                    <h4 className="hikeInfoHead"><i class="fas fa-sign"></i> Length</h4>
+                    <p>{length} miles, roundtrip</p>
+                </div>
+                <div>
                     <h4 className="hikeInfoHead">Rating</h4>
                     <p><Rating
                             initialRating={rating}
@@ -22,12 +26,8 @@ function ChosenHikeCon(props) {
                         /> ({ratingRating} votes)</p>
                 </div>
                 <div>
-                    <h4 className="hikeInfoHead">Elevation Gain</h4>
+                    <h4 className="hikeInfoHead"><i class="fas fa-mountain"></i> Elevation Gain</h4>
                     <p>{gain} ft.</p>
-                </div>
-                <div>
-                    <h4 className="hikeInfoHead">Length</h4>
-                    <p>{length} miles, roundtrip</p>
                 </div>
             </div>
         </div>
