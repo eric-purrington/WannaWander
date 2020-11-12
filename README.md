@@ -2,7 +2,7 @@
 A FullStack React application built to make finding your next hike easy
 
 
-![image](https://user-images.githubusercontent.com/57811605/89361054-18979780-d67f-11ea-8ab4-69cfa94b3dc1.png)
+![image](./client/src/assets/WannaWander.png)
 
 ## Description
 

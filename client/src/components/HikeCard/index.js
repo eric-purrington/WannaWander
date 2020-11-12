@@ -36,7 +36,7 @@ function HikeCard(props) {
                             readonly
                             emptySymbol={<i className="badStar fas fa-star"></i>}
                             fullSymbol={<i className="goodStar fas fa-star"></i>}
-                        /> ({props.ratingRating} votes)</p>
+                        /> ({props.ratingRating} vote(s))</p>
                     <p className="hikeDistance"><i className="fas fa-road"></i> Distance: {props.distance} mi.</p>
                     <p className="hikeLength"><i className="fas fa-sign"></i> Length: {props.length} mi.</p>
                     <p className="hikeGain"><i className="fas fa-mountain"></i> Gain: {props.gain} ft.</p>

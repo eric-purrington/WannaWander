@@ -26,6 +26,7 @@ function SearchBar(props) {
                             formatLabel={value => `${value} ft`}
                             maxValue={5000}
                             minValue={0}
+                            step={100}
                             value={props.gainValue} 
                             onChange={props.onGainChange} />
                     </div>
@@ -35,6 +36,7 @@ function SearchBar(props) {
                         <InputRange
                             formatLabel={value => `${value} mi`}
                             maxValue={200}
+                            step={5}
                             value={props.distanceValue} 
                             onChange={props.onDistanceChange} />
                     </div>

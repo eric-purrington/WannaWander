@@ -11,7 +11,7 @@ function ChosenHikeCon(props) {
             <h1 className="chosenHikeName">{name}</h1>
             <h3 className="homageHead">This trail falls within...</h3>
             {props.children}
-            <img className="chosenHikeImg" src={bigimg} alt={name} />
+            {bigimg ? <img className="chosenHikeImg" src={bigimg} alt={name} /> : <img className="chosenHikeImg" src="https://via.placeholder.com/500/1e6262/b4f1f1?text=Image+Not+Found" alt={name} />}
             <p>{summary}</p>
             <div className="hikeInfoGrid uk-grid uk-child-width-1-4@s uk-child-width-1-2@xs" uk-grid="true">
                 <div className="uk-first-column">
@@ -25,7 +25,7 @@ function ChosenHikeCon(props) {
                             readonly
                             emptySymbol={<i className="badStar fas fa-star"></i>}
                             fullSymbol={<i className="goodStar fas fa-star"></i>}
-                        /> ({ratingRating} votes)</p>
+                        /> ({ratingRating} vote(s))</p>
                 </div>
                 <div>
                     <h4 className="hikeInfoHead"><i className="fas fa-sign"></i> Length</h4>
