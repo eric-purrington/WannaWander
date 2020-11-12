@@ -3,7 +3,6 @@ import ChosenHikeCon from "../components/ChosenHikeCon";
 import HomageCard from "../components/HomageCard";
 import WeatherCon from "../components/WeatherCon";
 import WeatherCard from "../components/WeatherCard";
-import MapCon from "../components/MapCon";
 import API from "../utils/API";
 
 function HikeMe(props) {
@@ -33,8 +32,6 @@ function HikeMe(props) {
                     <WeatherCard key={day.dt} day={weather.indexOf(day)} daysWeather={day} />
                 )}
             </WeatherCon>
-
-            <MapCon name={name} longitude={longitude} latitude={latitude}/>
         </div>
     )
 }

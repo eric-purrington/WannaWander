@@ -17,12 +17,14 @@ function WeatherCard(props) {
     const sunsetTime = sunsetHours + ":" + sunsetMin.substr(-2);
 
     return (
-        <div className="weatherCard uk-card uk-card-default uk-card-hover uk-card-body">
-            <h4 className="uk-card-title">{currentDay}</h4>
+        <div className="weatherCard">
+            <hr></hr>
+            <h4 className="">{currentDay}</h4>
             <img src={iconSource} alt="weather icon" />
             <p>{Math.round(props.daysWeather.temp.max)}&deg; / {Math.round(props.daysWeather.temp.min)}&deg;</p>
             <p>Sunrise ~ {sunriseTime} am</p>
             <p>Sunset ~ {sunsetTime} pm</p>
+            <hr></hr>
         </div>
     )
 }

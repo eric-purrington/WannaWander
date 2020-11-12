@@ -30,7 +30,7 @@ function HikeCard(props) {
                     {props.lilimg ? <Link to={linkObj}><img className="hikeImg" src={props.lilimg} alt={props.name} /></Link> : <Link to={linkObj}><img className="hikeImg" src="https://via.placeholder.com/300/1e6262/b4f1f1?text=Image+Not+Found" alt={props.name} /></Link>}
                 </div>
                 <div className="hikeInfo">
-                    <p className="hikeRatingDifficulty">Rating:&nbsp;  
+                    <p className="hikeRatingDifficulty"><i class="fas fa-heart"></i> Rating:&nbsp;  
                         <Rating
                             initialRating={props.rating}
                             readonly

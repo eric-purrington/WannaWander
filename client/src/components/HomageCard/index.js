@@ -1,13 +1,12 @@
 import React from "react";
 import "./style.css";
 
-function HomeageCard(props) {
-
+function HomageCard(props) {
     return (
-        <div className="homeageCard">
-            <p>{props.info.Name} learn more <a href={props.info.description}>here</a></p>
+        <div className="homageCard">
+            <p>{props.info.Name} territory: Learn more <a className="homageLink" href={props.info.description} target="blank">here</a></p>
         </div>
     )
 }
 
-export default HomeageCard;
+export default HomageCard;

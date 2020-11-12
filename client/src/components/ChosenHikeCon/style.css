@@ -1,17 +1,30 @@
 .hikeInfoGrid {
-    margin: 30px 100px;
+    margin: 30px 0px !important;
+}
+
+.hikeInfoGrid div {
+    padding: 0px;
 }
 
 .chosenHikeCon {
     margin-top: 50px;
+    padding: 20px;
 }
 
 .chosenHikeLocation {
     margin: 25px;
     font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 .chosenHikeImg {
     border-radius: 50px;
 }
 
+.hikeInfoGrid div p, .hikeInfoHead, .chosenHikeCon p {
+    color: white;
+}
+
+.homageHead {
+    color: white;
+}
