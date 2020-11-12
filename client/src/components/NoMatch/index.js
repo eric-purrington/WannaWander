@@ -3,9 +3,9 @@ import "./style.css";
 
 function NoMatch() {
     return (
-        <div className="uk-container uk-text-center">
-            <h1 className="noMatchHeader">Looks like you wandered a little too far :)</h1>
-            <h3 className="noMatchHeader">404: Not found</h3>
+        <div className="uk-container uk-text-center noMatchCon">
+            <h1>Looks like you wandered a little too far :)</h1>
+            <h3>404: Not found</h3>
         </div>
     )
 };

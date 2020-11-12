@@ -1,4 +1,8 @@
-.noMatchHeader {
-    margin: 200px;
+.noMatchCon {
+    margin-top: 200px;
+}
+
+.noMatchCon h1, .noMatchCon h3 {
     font-family: 'Montserrat', sans-serif;
+    color: white;
 }
