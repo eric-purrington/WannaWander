@@ -6,7 +6,7 @@
     border: 1px outset rgb(255, 238, 0);
     box-shadow: 3px 3px 5px rgb(255, 238, 0);
     display: inline-block;
-    max-height: 750px;
+    max-height: 850px;
     margin-bottom: 50px !important;
 }
 
@@ -33,6 +33,11 @@
 .searchBtn {
     margin-top: 25px;
     border-radius: 25px;
+    background-color: rgb(255, 238, 0);
+    color: rgb(0, 70, 21);
+}
+
+.searchBtn:focus {
     background-color: rgb(255, 238, 0);
     color: rgb(0, 70, 21);
 }

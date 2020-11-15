@@ -10,7 +10,13 @@ function SearchBar(props) {
                 
                     <h3 className="uk-text-center searchHead">Search Hikes</h3>
 
-                    <div className="uk-first-column lengthInputRange">
+
+                    <div className="uk-first-column locationInput">
+                        <h4 className="uk-text-center inputHead">Your Zip Code</h4>
+                        <input onChange={props.onZipChange} className="uk-input" type="text" placeholder="80231"/>
+                    </div>
+
+                    <div className="lengthInputRange">
                         <h4 className="uk-text-center inputHead">Length</h4>
                         <InputRange
                             formatLabel={value => `${value} mi`}

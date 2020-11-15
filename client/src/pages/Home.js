@@ -55,6 +55,18 @@ function Home() {
     const onGainChange = (value) => {
         setGainValue(value);
     }
+
+    const onZipChange = (event) => {
+        event.preventDefault();
+        if(event.target.value.toString().length === 5) {
+            API.getCoords(event.target.value).then(res => {
+                setQueryParams({...queryParams,
+                    usersLat: res.data.coord.lat,
+                    usersLon: res.data.coord.lon
+                });
+            });
+        }
+    }
     
     const onDistanceChange = (value) => {
         setQueryParams({...queryParams,
@@ -129,6 +141,8 @@ function Home() {
                     onSortChange={onSortChange}
                     onStarChange={onStarChange} 
                     onResultChange={onResultChange} 
+                    lat={queryParams.usersLat}
+                    onZipChange={onZipChange}
                 />
                 {results.map(hike => 
                     <HikeCard 

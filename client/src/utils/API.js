@@ -27,5 +27,13 @@ export default {
                 lon: lon
             }
         }).catch(error => console.log(error));
+    }, 
+    getCoords: function(zipcode) {
+        return axios.get("/api/getCoords", {
+            params: {
+                zipcode: zipcode
+            }
+        }).catch(error => console.log(error));
     }
+
 }

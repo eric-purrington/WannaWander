@@ -20,6 +20,14 @@ function HikeCard(props) {
             location: `${props.location}`
         }
     }
+    let votes = "";
+    
+    if (props.ratingRating === 1){
+        votes = "vote"
+    } else {
+        votes = "votes"
+    }
+
     return (
         <div className="uk-width-1-1 hikeCard uk-container-expand">
             <hr/>
@@ -30,13 +38,13 @@ function HikeCard(props) {
                     {props.lilimg ? <Link to={linkObj}><img className="hikeImg" src={props.lilimg} alt={props.name} /></Link> : <Link to={linkObj}><img className="hikeImg" src="https://via.placeholder.com/300/1e6262/b4f1f1?text=Image+Not+Found" alt={props.name} /></Link>}
                 </div>
                 <div className="hikeInfo">
-                    <p className="hikeRatingDifficulty"><i class="fas fa-heart"></i> Rating:&nbsp;  
+                    <p className="hikeRatingDifficulty"><i className="fas fa-heart"></i> Rating:&nbsp;  
                         <Rating
                             initialRating={props.rating}
                             readonly
                             emptySymbol={<i className="badStar fas fa-star"></i>}
                             fullSymbol={<i className="goodStar fas fa-star"></i>}
-                        /> ({props.ratingRating} vote(s))</p>
+                        /> ({props.ratingRating} {votes})</p>
                     <p className="hikeDistance"><i className="fas fa-road"></i> Distance: {props.distance} mi.</p>
                     <p className="hikeLength"><i className="fas fa-sign"></i> Length: {props.length} mi.</p>
                     <p className="hikeGain"><i className="fas fa-mountain"></i> Gain: {props.gain} ft.</p>

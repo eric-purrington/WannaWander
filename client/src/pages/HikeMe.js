@@ -6,7 +6,9 @@ import WeatherCard from "../components/WeatherCard";
 import API from "../utils/API";
 
 function HikeMe(props) {
-    const {name, bigimg, rating, summary, length, gain, distance, location, ratingRating, longitude, latitude} = props.location.hikeProps;
+    const {
+        // name, bigimg, rating, summary, length, gain, distance, location, ratingRating,
+        longitude, latitude} = props.location.hikeProps;
     const [weather, setWeather] = useState([]);
     const [indigenousData, setIndigenousData] = useState([]);
 

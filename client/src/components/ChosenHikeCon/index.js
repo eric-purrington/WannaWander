@@ -3,7 +3,9 @@ import Rating from "react-rating";
 import "./style.css";
 
 function ChosenHikeCon(props) {
-    const {name, bigimg, rating, summary, length, gain, distance, location, ratingRating, longitude, latitude} = props.info;
+    const {name, bigimg, rating, summary, length, gain,
+        // distance, 
+        location, ratingRating, longitude, latitude} = props.info;
     const gMapsURL = "https://www.google.com/maps/dir/?api=1&destination=" + latitude + "," + longitude + "&travelmode=driving";
 
     return (
@@ -15,11 +17,11 @@ function ChosenHikeCon(props) {
             <p>{summary}</p>
             <div className="hikeInfoGrid uk-grid uk-child-width-1-4@s uk-child-width-1-2@xs" uk-grid="true">
                 <div className="uk-first-column">
-                    <h4 className="hikeInfoHead"><i class="fas fa-map-marker-alt"></i> Location</h4>
+                    <h4 className="hikeInfoHead"><i className="fas fa-map-marker-alt"></i> Location</h4>
                     <p>{location}:</p><a href={gMapsURL} className="directionsLink" target="blank">Get Directions</a>
                 </div>
                 <div>
-                    <h4 className="hikeInfoHead"><i class="fas fa-heart"></i> Rating</h4>
+                    <h4 className="hikeInfoHead"><i className="fas fa-heart"></i> Rating</h4>
                     <p><Rating
                             initialRating={rating}
                             readonly
